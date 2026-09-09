@@ -1,43 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { StatusBadge } from "@/components/ui/badge";
+import { StatusBadge, ApprovalChip } from "@/components/ui/badge";
 import { Field, Input, Select } from "@/components/ui/input";
 import { PageTitle } from "@/components/shell";
 import { AddForm, DataTable, Panel } from "@/components/journal";
-import { num, packLabel } from "@/lib/format";
-import { finStock, lightOf, packStock, rawStock } from "@/lib/kpis";
+import { num, packLabel, toman } from "@/lib/format";
 import { PACKS, PRODUCTS, useWorkshop } from "@/lib/store";
-import type { KpiDef } from "@/lib/types";
+import { countAlert, countVariance, finStockQty, packStockQty, rawStockQty, rawWac, stockLight } from "@/lib/costing";
+import { useSessionProfile } from "@/lib/session";
+import { canSeeFinance } from "@/lib/access";
 
 export const Route = createFileRoute("/inventory")({ component: Page });
 
-const rawDef = (min: number): KpiDef => ({
-  key: "raw",
-  name: "",
-  green: min,
-  yellow: min * 0.4,
-  direction: "higher",
-  unit: "کیلوگرم",
-  actionRed: "",
-  actionYellow: "",
-});
-
 function Page() {
-  const { purchases, production, sales, moves, addMove, remove, settings } = useWorkshop();
+  const store = useWorkshop();
+  const { purchases, production, sales, moves, counts, settings } = store;
+  const { mutate, profile } = useSessionProfile();
   const perRawMin = settings.minRaw / PRODUCTS.length;
   const perFinMin = settings.minFin / PRODUCTS.length;
+  const perRawRe = settings.reorderRaw / PRODUCTS.length;
+  const perFinRe = settings.reorderFin / PRODUCTS.length;
 
   return (
     <div>
       <PageTitle
         title="موجودی"
-        hint="خرید و فروش را اینجا دوباره ننویسید. خلاصه خودکار است. فقط شمارش و ضایعات انبار را پایین بزنید."
+        hint="دو انبار جدا: مواد اولیه و محصول نهایی. میانگین موزون از خریدهای تأییدشده است. شمارش فیزیکی مغایرت را نشان می‌دهد."
       />
       <Panel className="mb-5 overflow-hidden p-0">
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[640px] text-sm">
+          <table className="w-full min-w-[720px] text-sm">
             <thead className="bg-primary text-primary-foreground">
               <tr>
-                {["نوع", "محصول", "موجودی", "حداقل", "وضعیت"].map((h) => (
+                {["نوع", "محصول", "مقدار", "میانگین موزون", "ارزش", "حداقل", "نقطه سفارش", "وضعیت"].map((h) => (
                   <th key={h} className="px-3 py-3 text-right font-medium">
                     {h}
                   </th>
@@ -46,14 +40,18 @@ function Page() {
             </thead>
             <tbody>
               {PRODUCTS.map((p, i) => {
-                const v = rawStock(p, purchases, production, moves);
-                const light = lightOf(v, rawDef(perRawMin));
+                const v = rawStockQty(p, purchases, production, moves);
+                const avg = rawWac(p, purchases).avg;
+                const light = stockLight(v, perRawMin, perRawRe);
                 return (
                   <tr key={"r" + p} className={i % 2 ? "bg-muted/60" : ""}>
                     <td className="px-3 py-2">مواد اولیه</td>
                     <td className="px-3 py-2">{p}</td>
                     <td className="px-3 py-2 tabular-nums">{num(v, 1)} کیلو</td>
+                    <td className="px-3 py-2">{canSeeFinance(profile.role) ? toman(avg) : "—"}</td>
+                    <td className="px-3 py-2">{canSeeFinance(profile.role) ? toman(v * avg) : "—"}</td>
                     <td className="px-3 py-2">{num(perRawMin, 0)}</td>
+                    <td className="px-3 py-2">{num(perRawRe, 0)}</td>
                     <td className="px-3 py-2">
                       <StatusBadge light={light} />
                     </td>
@@ -61,14 +59,17 @@ function Page() {
                 );
               })}
               {PRODUCTS.map((p, i) => {
-                const v = finStock(p, production, sales, moves);
-                const light = lightOf(v, rawDef(perFinMin));
+                const v = finStockQty(p, production, sales, moves);
+                const light = stockLight(v, perFinMin, perFinRe);
                 return (
                   <tr key={"f" + p} className={i % 2 ? "bg-muted/60" : ""}>
                     <td className="px-3 py-2">محصول نهایی</td>
                     <td className="px-3 py-2">{p}</td>
                     <td className="px-3 py-2 tabular-nums">{num(v, 1)} کیلو</td>
+                    <td className="px-3 py-2">—</td>
+                    <td className="px-3 py-2">—</td>
                     <td className="px-3 py-2">{num(perFinMin, 0)}</td>
+                    <td className="px-3 py-2">{num(perFinRe, 0)}</td>
                     <td className="px-3 py-2">
                       <StatusBadge light={light} />
                     </td>
@@ -85,7 +86,7 @@ function Page() {
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUCTS.flatMap((p) =>
             PACKS.map((pk) => {
-              const n = packStock(p, pk, production, sales);
+              const n = packStockQty(p, pk, production, sales);
               if (n === 0) return null;
               return (
                 <div key={p + pk} className="flex justify-between rounded-[var(--radius-sm)] bg-muted px-3 py-2 text-sm">
@@ -101,18 +102,96 @@ function Page() {
       </Panel>
 
       <AddForm
-        title="حرکت دستی انبار (شمارش / ضایعات / اصلاح)"
+        title="شمارش فیزیکی"
+        submitLabel="ثبت شمارش برای تأیید"
         onSubmit={(e) => {
           const f = new FormData(e.currentTarget);
-          addMove({
-            date: String(f.get("date") || settings.today),
-            kind: String(f.get("kind")),
-            product: String(f.get("product")),
-            inn: Number(f.get("inn") || 0),
-            out: Number(f.get("out") || 0),
-            unit: "کیلوگرم",
-            loc: String(f.get("loc") || ""),
-            reason: String(f.get("reason") || ""),
+          const product = String(f.get("product"));
+          const kind = String(f.get("kind"));
+          const systemQty =
+            kind === "مواد اولیه"
+              ? rawStockQty(product, purchases, production, moves)
+              : finStockQty(product, production, sales, moves);
+          void mutate({
+            type: "addCount",
+            row: {
+              date: String(f.get("date") || settings.today),
+              kind,
+              product,
+              systemQty,
+              actualQty: Number(f.get("actualQty")),
+              note: String(f.get("note") || ""),
+            },
+          });
+        }}
+      >
+        <Field label="تاریخ">
+          <Input name="date" defaultValue={settings.today} />
+        </Field>
+        <Field label="نوع">
+          <Select name="kind">
+            <option>مواد اولیه</option>
+            <option>محصول نهایی</option>
+          </Select>
+        </Field>
+        <Field label="محصول">
+          <Select name="product">{PRODUCTS.map((p) => <option key={p}>{p}</option>)}</Select>
+        </Field>
+        <Field label="مقدار واقعی (کیلو)">
+          <Input name="actualQty" type="number" step="0.1" required />
+        </Field>
+        <Field label="توضیح مغایرت">
+          <Input name="note" />
+        </Field>
+      </AddForm>
+      <DataTable
+        columns={[
+          { key: "d", label: "تاریخ" },
+          { key: "k", label: "نوع" },
+          { key: "p", label: "محصول" },
+          { key: "s", label: "سیستم" },
+          { key: "a", label: "واقعی" },
+          { key: "v", label: "مغایرت" },
+          { key: "al", label: "هشدار" },
+          { key: "st", label: "تأیید" },
+        ]}
+        rows={counts.map((c) => {
+          const v = countVariance(c);
+          const alert = countAlert(c, settings.countVariancePct);
+          return {
+            id: c.id,
+            muted: c.voided,
+            onCancel: c.voided ? undefined : () => void mutate({ type: "void", collection: "counts", id: c.id }, "لغو شد"),
+            cells: [
+              c.date,
+              c.kind,
+              c.product,
+              num(c.systemQty, 1),
+              num(c.actualQty, 1),
+              num(v, 1),
+              alert ? "بالاتر از حد" : "قابل قبول",
+              <ApprovalChip key="a" status={c.approvalStatus} voided={c.voided} />,
+            ],
+          };
+        })}
+      />
+
+      <AddForm
+        title="حرکت دستی انبار (ضایعات / اصلاح)"
+        onSubmit={(e) => {
+          const f = new FormData(e.currentTarget);
+          void mutate({
+            type: "addMove",
+            row: {
+              date: String(f.get("date") || settings.today),
+              kind: String(f.get("kind")),
+              product: String(f.get("product")),
+              inn: Number(f.get("inn") || 0),
+              out: Number(f.get("out") || 0),
+              unit: "کیلوگرم",
+              loc: String(f.get("loc") || ""),
+              reason: String(f.get("reason") || ""),
+            },
           });
         }}
       >
@@ -146,11 +225,21 @@ function Page() {
           { key: "i", label: "ورود" },
           { key: "o", label: "خروج" },
           { key: "r", label: "علت" },
+          { key: "st", label: "تأیید" },
         ]}
         rows={moves.map((m) => ({
           id: m.id,
-          onDelete: () => remove("moves", m.id),
-          cells: [m.date, m.kind, m.product, num(m.inn, 1), num(m.out, 1), m.reason],
+          muted: m.voided,
+          onCancel: m.voided ? undefined : () => void mutate({ type: "void", collection: "moves", id: m.id }, "لغو شد"),
+          cells: [
+            m.date,
+            m.kind,
+            m.product,
+            num(m.inn, 1),
+            num(m.out, 1),
+            m.reason,
+            <ApprovalChip key="a" status={m.approvalStatus} voided={m.voided} />,
+          ],
         }))}
       />
     </div>

@@ -1,5 +1,5 @@
 import type { FormEvent, ReactNode } from "react";
-import { Trash2 } from "lucide-react";
+import { Ban } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -15,10 +15,12 @@ export function AddForm({
   title,
   onSubmit,
   children,
+  submitLabel = "ثبت",
 }: {
   title: string;
   onSubmit: (e: FormEvent<HTMLFormElement>) => void;
   children: ReactNode;
+  submitLabel?: string;
 }) {
   return (
     <Panel className="mb-5">
@@ -34,7 +36,7 @@ export function AddForm({
         {children}
         <div className="flex items-end">
           <Button type="submit" className="w-full sm:w-auto">
-            ثبت
+            {submitLabel}
           </Button>
         </div>
       </form>
@@ -47,7 +49,7 @@ export function DataTable({
   rows,
 }: {
   columns: { key: string; label: string; className?: string }[];
-  rows: { id: string; cells: ReactNode[]; onDelete?: () => void }[];
+  rows: { id: string; cells: ReactNode[]; onCancel?: () => void; muted?: boolean }[];
 }) {
   if (!rows.length) {
     return (
@@ -72,21 +74,22 @@ export function DataTable({
           </thead>
           <tbody>
             {rows.map((r, i) => (
-              <tr key={r.id} className={i % 2 ? "bg-muted/60" : "bg-surface"}>
+              <tr key={r.id} className={cn(i % 2 ? "bg-muted/60" : "bg-surface", r.muted && "opacity-50")}>
                 {r.cells.map((cell, idx) => (
                   <td key={idx} className="px-3 py-2.5 align-middle">
                     {cell}
                   </td>
                 ))}
                 <td className="px-2">
-                  {r.onDelete ? (
+                  {r.onCancel ? (
                     <button
                       type="button"
-                      onClick={r.onDelete}
+                      onClick={r.onCancel}
                       className="grid size-9 place-items-center rounded-[var(--radius-sm)] text-fg-subtle hover:bg-bad-bg hover:text-bad"
-                      aria-label="حذف"
+                      aria-label="لغو"
+                      title="لغو / ابطال"
                     >
-                      <Trash2 className="size-4" />
+                      <Ban className="size-4" />
                     </button>
                   ) : null}
                 </td>

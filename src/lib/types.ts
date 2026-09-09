@@ -1,5 +1,29 @@
 export type StatusLight = "ok" | "watch" | "critical" | "info";
 
+export type AccessRole =
+  | "admin"
+  | "purchasing"
+  | "production"
+  | "warehouse"
+  | "sales"
+  | "operator";
+
+export type ApprovalStatus = "pending" | "approved" | "rejected" | "revision";
+
+export type QcResult = "قبول" | "رد" | "مشروط";
+
+export type ApprovalFields = {
+  approvalStatus: ApprovalStatus;
+  submittedBy: string;
+  submittedByName: string;
+  submittedAt: string;
+  reviewedBy?: string;
+  reviewedByName?: string;
+  reviewedAt?: string;
+  reviewNote?: string;
+  voided?: boolean;
+};
+
 export type Purchase = {
   id: string;
   date: string;
@@ -10,8 +34,9 @@ export type Purchase = {
   freight: number;
   quality: string;
   status: string;
+  qcResult: QcResult;
   note: string;
-};
+} & ApprovalFields;
 
 export type Production = {
   id: string;
@@ -21,8 +46,11 @@ export type Production = {
   cleanKg: number;
   packKg: number;
   operator: string;
+  wasteReason: string;
+  startTime: string;
+  endTime: string;
   note: string;
-};
+} & ApprovalFields;
 
 export type Sale = {
   id: string;
@@ -36,7 +64,8 @@ export type Sale = {
   discount: number;
   collected: number;
   seller: string;
-};
+  creditDays: number;
+} & ApprovalFields;
 
 export type Customer = {
   id: string;
@@ -62,8 +91,9 @@ export type Visit = {
   collected: number;
   km: number;
   fuel: number;
+  visitor: string;
   note: string;
-};
+} & ApprovalFields;
 
 export type Expense = {
   id: string;
@@ -73,7 +103,7 @@ export type Expense = {
   payer: string;
   method: string;
   note: string;
-};
+} & ApprovalFields;
 
 export type Supplier = {
   id: string;
@@ -98,12 +128,16 @@ export type Employee = {
   id: string;
   name: string;
   role: string;
+  accessRole: AccessRole;
   duties: string;
   salary: number;
   commissionRate: number;
   start: string;
   status: string;
   note: string;
+  username?: string;
+  userId?: string;
+  hasLogin?: boolean;
 };
 
 export type InvMove = {
@@ -116,6 +150,39 @@ export type InvMove = {
   unit: string;
   loc: string;
   reason: string;
+} & ApprovalFields;
+
+export type PhysicalCount = {
+  id: string;
+  date: string;
+  kind: string;
+  product: string;
+  systemQty: number;
+  actualQty: number;
+  note: string;
+} & ApprovalFields;
+
+export type AuditEntry = {
+  id: string;
+  at: string;
+  userId: string;
+  userName: string;
+  action: string;
+  collection: string;
+  recordId: string;
+  summary: string;
+};
+
+export type AppNotification = {
+  id: string;
+  userId: string;
+  title: string;
+  body: string;
+  kind: string;
+  href?: string;
+  recordId?: string;
+  read: boolean;
+  createdAt: string;
 };
 
 export type KpiDef = {
@@ -139,4 +206,49 @@ export type Settings = {
   abcB: number;
   minRaw: number;
   minFin: number;
+  reorderRaw: number;
+  reorderFin: number;
+  packingCost400: number;
+  packingCost900: number;
+  packingCost10: number;
+  productionCostPerKg: number;
+  overheadPerKg: number;
+  yieldDefault: number;
+  countVariancePct: number;
+  creditDays: number;
 };
+
+export type SessionProfile = {
+  userId: string;
+  username: string;
+  displayName: string;
+  role: AccessRole;
+  employeeId?: string;
+  active: boolean;
+  needsInvite?: boolean;
+};
+
+export type WorkshopDoc = {
+  settings: Settings;
+  kpiDefs: KpiDef[];
+  purchases: Purchase[];
+  production: Production[];
+  sales: Sale[];
+  customers: Customer[];
+  visits: Visit[];
+  expenses: Expense[];
+  suppliers: Supplier[];
+  employees: Employee[];
+  moves: InvMove[];
+  counts: PhysicalCount[];
+  audit: AuditEntry[];
+};
+
+export type SensitiveCollection =
+  | "purchases"
+  | "production"
+  | "sales"
+  | "visits"
+  | "expenses"
+  | "moves"
+  | "counts";

@@ -10,23 +10,38 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApprovalsRouteImport } from './routes/approvals'
+import { Route as CostsRouteImport } from './routes/costs'
 import { Route as CustomersRouteImport } from './routes/customers'
 import { Route as EmployeesRouteImport } from './routes/employees'
 import { Route as ExpensesRouteImport } from './routes/expenses'
 import { Route as FormsRouteImport } from './routes/forms'
 import { Route as GuideRouteImport } from './routes/guide'
 import { Route as InventoryRouteImport } from './routes/inventory'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as ProductionRouteImport } from './routes/production'
 import { Route as PurchasesRouteImport } from './routes/purchases'
 import { Route as SalesRouteImport } from './routes/sales'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SuppliersRouteImport } from './routes/suppliers'
 import { Route as VisitsRouteImport } from './routes/visits'
+import { Route as WorkRouteImport } from './routes/work'
 import { Route as FormsIdRouteImport } from './routes/forms.$id'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApprovalsRoute = ApprovalsRouteImport.update({
+  id: '/approvals',
+  path: '/approvals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CostsRoute = CostsRouteImport.update({
+  id: '/costs',
+  path: '/costs',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CustomersRoute = CustomersRouteImport.update({
@@ -59,6 +74,11 @@ const InventoryRoute = InventoryRouteImport.update({
   path: '/inventory',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductionRoute = ProductionRouteImport.update({
   id: '/production',
   path: '/production',
@@ -89,126 +109,171 @@ const VisitsRoute = VisitsRouteImport.update({
   path: '/visits',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FormsIdRoute = FormsIdRouteImport.update({
   id: '/$id',
   path: '/$id',
   getParentRoute: () => FormsRoute,
 } as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/approvals': typeof ApprovalsRoute
+  '/costs': typeof CostsRoute
   '/customers': typeof CustomersRoute
   '/employees': typeof EmployeesRoute
   '/expenses': typeof ExpensesRoute
   '/forms': typeof FormsRouteWithChildren
   '/guide': typeof GuideRoute
   '/inventory': typeof InventoryRoute
+  '/login': typeof LoginRoute
   '/production': typeof ProductionRoute
   '/purchases': typeof PurchasesRoute
   '/sales': typeof SalesRoute
   '/settings': typeof SettingsRoute
   '/suppliers': typeof SuppliersRoute
   '/visits': typeof VisitsRoute
+  '/work': typeof WorkRoute
   '/forms/$id': typeof FormsIdRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/approvals': typeof ApprovalsRoute
+  '/costs': typeof CostsRoute
   '/customers': typeof CustomersRoute
   '/employees': typeof EmployeesRoute
   '/expenses': typeof ExpensesRoute
   '/forms': typeof FormsRouteWithChildren
   '/guide': typeof GuideRoute
   '/inventory': typeof InventoryRoute
+  '/login': typeof LoginRoute
   '/production': typeof ProductionRoute
   '/purchases': typeof PurchasesRoute
   '/sales': typeof SalesRoute
   '/settings': typeof SettingsRoute
   '/suppliers': typeof SuppliersRoute
   '/visits': typeof VisitsRoute
+  '/work': typeof WorkRoute
   '/forms/$id': typeof FormsIdRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/approvals': typeof ApprovalsRoute
+  '/costs': typeof CostsRoute
   '/customers': typeof CustomersRoute
   '/employees': typeof EmployeesRoute
   '/expenses': typeof ExpensesRoute
   '/forms': typeof FormsRouteWithChildren
   '/guide': typeof GuideRoute
   '/inventory': typeof InventoryRoute
+  '/login': typeof LoginRoute
   '/production': typeof ProductionRoute
   '/purchases': typeof PurchasesRoute
   '/sales': typeof SalesRoute
   '/settings': typeof SettingsRoute
   '/suppliers': typeof SuppliersRoute
   '/visits': typeof VisitsRoute
+  '/work': typeof WorkRoute
   '/forms/$id': typeof FormsIdRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/approvals'
+    | '/costs'
     | '/customers'
     | '/employees'
     | '/expenses'
     | '/forms'
     | '/guide'
     | '/inventory'
+    | '/login'
     | '/production'
     | '/purchases'
     | '/sales'
     | '/settings'
     | '/suppliers'
     | '/visits'
+    | '/work'
     | '/forms/$id'
+    | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/approvals'
+    | '/costs'
     | '/customers'
     | '/employees'
     | '/expenses'
     | '/forms'
     | '/guide'
     | '/inventory'
+    | '/login'
     | '/production'
     | '/purchases'
     | '/sales'
     | '/settings'
     | '/suppliers'
     | '/visits'
+    | '/work'
     | '/forms/$id'
+    | '/api/auth/$'
   id:
     | '__root__'
     | '/'
+    | '/approvals'
+    | '/costs'
     | '/customers'
     | '/employees'
     | '/expenses'
     | '/forms'
     | '/guide'
     | '/inventory'
+    | '/login'
     | '/production'
     | '/purchases'
     | '/sales'
     | '/settings'
     | '/suppliers'
     | '/visits'
+    | '/work'
     | '/forms/$id'
+    | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApprovalsRoute: typeof ApprovalsRoute
+  CostsRoute: typeof CostsRoute
   CustomersRoute: typeof CustomersRoute
   EmployeesRoute: typeof EmployeesRoute
   ExpensesRoute: typeof ExpensesRoute
   FormsRoute: typeof FormsRouteWithChildren
   GuideRoute: typeof GuideRoute
   InventoryRoute: typeof InventoryRoute
+  LoginRoute: typeof LoginRoute
   ProductionRoute: typeof ProductionRoute
   PurchasesRoute: typeof PurchasesRoute
   SalesRoute: typeof SalesRoute
   SettingsRoute: typeof SettingsRoute
   SuppliersRoute: typeof SuppliersRoute
   VisitsRoute: typeof VisitsRoute
+  WorkRoute: typeof WorkRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -218,6 +283,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/approvals': {
+      id: '/approvals'
+      path: '/approvals'
+      fullPath: '/approvals'
+      preLoaderRoute: typeof ApprovalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/costs': {
+      id: '/costs'
+      path: '/costs'
+      fullPath: '/costs'
+      preLoaderRoute: typeof CostsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/customers': {
@@ -262,6 +341,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InventoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/production': {
       id: '/production'
       path: '/production'
@@ -304,12 +390,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VisitsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/forms/$id': {
       id: '/forms/$id'
       path: '/$id'
       fullPath: '/forms/$id'
       preLoaderRoute: typeof FormsIdRouteImport
       parentRoute: typeof FormsRoute
+    }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -326,18 +426,23 @@ const FormsRouteWithChildren = FormsRoute._addFileChildren(FormsRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApprovalsRoute: ApprovalsRoute,
+  CostsRoute: CostsRoute,
   CustomersRoute: CustomersRoute,
   EmployeesRoute: EmployeesRoute,
   ExpensesRoute: ExpensesRoute,
   FormsRoute: FormsRouteWithChildren,
   GuideRoute: GuideRoute,
   InventoryRoute: InventoryRoute,
+  LoginRoute: LoginRoute,
   ProductionRoute: ProductionRoute,
   PurchasesRoute: PurchasesRoute,
   SalesRoute: SalesRoute,
   SettingsRoute: SettingsRoute,
   SuppliersRoute: SuppliersRoute,
   VisitsRoute: VisitsRoute,
+  WorkRoute: WorkRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

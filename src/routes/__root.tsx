@@ -1,7 +1,9 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
+import { Toaster } from "sonner";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Shell } from "@/components/shell";
+import { WorkshopSessionProvider } from "@/lib/session";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "سامانه کارگاه پلدختر";
@@ -21,7 +23,11 @@ export const Route = createRootRoute({
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
   }),
-  component: () => (
+  component: Root,
+});
+
+function Root() {
+  return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <head>
         <HeadContent />
@@ -29,12 +35,23 @@ export const Route = createRootRoute({
       <body>
         <PreviewHostBridge />
         <AuthProvider>
-          <Shell>
-            <Outlet />
-          </Shell>
+          <Toaster richColors position="top-center" dir="rtl" />
+          <Frame />
         </AuthProvider>
         <Scripts />
       </body>
     </html>
-  ),
-});
+  );
+}
+
+function Frame() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  if (pathname === "/login") return <Outlet />;
+  return (
+    <WorkshopSessionProvider>
+      <Shell>
+        <Outlet />
+      </Shell>
+    </WorkshopSessionProvider>
+  );
+}
