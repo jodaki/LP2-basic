@@ -1,0 +1,1307 @@
+{
+  "meta": {
+    "workshop": "کارگاه بسته‌بندی حبوبات پلدختر",
+    "city": "پلدختر",
+    "year": 1405,
+    "month": 6,
+    "today": "1405/06/18",
+    "currency": "تومان"
+  },
+  "products": [
+    "لوبیا چیتی",
+    "لوبیا قرمز",
+    "لوبیا سفید",
+    "عدس",
+    "نخود",
+    "لپه",
+    "ماش"
+  ],
+  "packs": [
+    0.4,
+    0.9,
+    10
+  ],
+  "purchases": [
+    {
+      "date": "1405/04/18",
+      "supplier": "موجودی اول دوره",
+      "product": "لوبیا چیتی",
+      "kg": 180,
+      "price": 90000,
+      "freight": 0,
+      "quality": "خوب",
+      "status": "تأیید شده",
+      "note": "موجودی ابتدای کار"
+    },
+    {
+      "date": "1405/04/18",
+      "supplier": "موجودی اول دوره",
+      "product": "عدس",
+      "kg": 80,
+      "price": 74000,
+      "freight": 0,
+      "quality": "خوب",
+      "status": "تأیید شده",
+      "note": "موجودی ابتدای کار"
+    },
+    {
+      "date": "1405/04/18",
+      "supplier": "موجودی اول دوره",
+      "product": "نخود",
+      "kg": 90,
+      "price": 66000,
+      "freight": 0,
+      "quality": "خوب",
+      "status": "تأیید شده",
+      "note": "موجودی ابتدای کار"
+    },
+    {
+      "date": "1405/05/20",
+      "supplier": "کشاورز بروجرد",
+      "product": "لوبیا قرمز",
+      "kg": 120,
+      "price": 84000,
+      "freight": 1800000,
+      "quality": "خوب",
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "date": "1405/06/02",
+      "supplier": "کشاورز بروجرد",
+      "product": "لوبیا چیتی",
+      "kg": 400,
+      "price": 92000,
+      "freight": 2500000,
+      "quality": "عالی",
+      "status": "تأیید شده",
+      "note": "بار تازه"
+    },
+    {
+      "date": "1405/06/04",
+      "supplier": "اتحادیه نخود کوهدشت",
+      "product": "نخود",
+      "kg": 300,
+      "price": 68000,
+      "freight": 1600000,
+      "quality": "خوب",
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "date": "1405/06/07",
+      "supplier": "بازرگانی حبوبات خرم‌آباد",
+      "product": "عدس",
+      "kg": 250,
+      "price": 76000,
+      "freight": 1400000,
+      "quality": "خوب",
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "date": "1405/06/08",
+      "supplier": "تأمین عدس دزفول",
+      "product": "عدس",
+      "kg": 100,
+      "price": 79000,
+      "freight": 900000,
+      "quality": "ضعیف",
+      "status": "رد شده",
+      "note": "ناخالصی زیاد — برگشت"
+    },
+    {
+      "date": "1405/06/10",
+      "supplier": "کشاورز بروجرد",
+      "product": "لوبیا قرمز",
+      "kg": 200,
+      "price": 85000,
+      "freight": 1500000,
+      "quality": "خوب",
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "date": "1405/06/14",
+      "supplier": "تأمین عدس دزفول",
+      "product": "لپه",
+      "kg": 150,
+      "price": 80000,
+      "freight": 1100000,
+      "quality": "متوسط",
+      "status": "تأیید شده",
+      "note": "با کمی نخاله"
+    },
+    {
+      "date": "1405/06/16",
+      "supplier": "کشت و صنعت لرستان",
+      "product": "لوبیا سفید",
+      "kg": 180,
+      "price": 90000,
+      "freight": 1300000,
+      "quality": "عالی",
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "date": "1405/06/17",
+      "supplier": "اتحادیه نخود کوهدشت",
+      "product": "ماش",
+      "kg": 80,
+      "price": 72000,
+      "freight": 700000,
+      "quality": "خوب",
+      "status": "در انتظار",
+      "note": "هنوز کنترل کیفیت نشده"
+    }
+  ],
+  "production": [
+    {
+      "date": "1405/05/22",
+      "product": "لوبیا چیتی",
+      "inputKg": 80,
+      "cleanKg": 77.2,
+      "packKg": 0.9,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/05/25",
+      "product": "عدس",
+      "inputKg": 40,
+      "cleanKg": 38.4,
+      "packKg": 0.4,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/03",
+      "product": "لوبیا چیتی",
+      "inputKg": 120,
+      "cleanKg": 116.4,
+      "packKg": 0.4,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/03",
+      "product": "لوبیا چیتی",
+      "inputKg": 80,
+      "cleanKg": 77.6,
+      "packKg": 0.9,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/05",
+      "product": "نخود",
+      "inputKg": 100,
+      "cleanKg": 96.5,
+      "packKg": 0.9,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/05",
+      "product": "نخود",
+      "inputKg": 60,
+      "cleanKg": 58.2,
+      "packKg": 0.4,
+      "operator": "پدر مدیر",
+      "note": "کمک تولید"
+    },
+    {
+      "date": "1405/06/08",
+      "product": "عدس",
+      "inputKg": 90,
+      "cleanKg": 86.4,
+      "packKg": 0.4,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/09",
+      "product": "عدس",
+      "inputKg": 70,
+      "cleanKg": 64.0,
+      "packKg": 0.9,
+      "operator": "مسئول بسته‌بندی",
+      "note": "ضایعات بالاتر از معمول"
+    },
+    {
+      "date": "1405/06/11",
+      "product": "لوبیا قرمز",
+      "inputKg": 80,
+      "cleanKg": 77.2,
+      "packKg": 0.4,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/12",
+      "product": "لوبیا قرمز",
+      "inputKg": 70,
+      "cleanKg": 67.5,
+      "packKg": 0.9,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/13",
+      "product": "لوبیا چیتی",
+      "inputKg": 100,
+      "cleanKg": 97.0,
+      "packKg": 10,
+      "operator": "پدر مدیر",
+      "note": "بسته ۱۰ کیلویی عمده"
+    },
+    {
+      "date": "1405/06/15",
+      "product": "لپه",
+      "inputKg": 80,
+      "cleanKg": 76.8,
+      "packKg": 0.9,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/16",
+      "product": "لوبیا سفید",
+      "inputKg": 90,
+      "cleanKg": 87.3,
+      "packKg": 0.4,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    },
+    {
+      "date": "1405/06/17",
+      "product": "نخود",
+      "inputKg": 50,
+      "cleanKg": 48.5,
+      "packKg": 10,
+      "operator": "پدر مدیر",
+      "note": ""
+    },
+    {
+      "date": "1405/06/18",
+      "product": "لوبیا چیتی",
+      "inputKg": 60,
+      "cleanKg": 57.6,
+      "packKg": 0.9,
+      "operator": "مسئول بسته‌بندی",
+      "note": ""
+    }
+  ],
+  "sales": [
+    {
+      "date": "1405/05/26",
+      "customer": "سوپرمارکت رضایی",
+      "city": "پلدختر",
+      "product": "لوبیا چیتی",
+      "packKg": 0.9,
+      "qty": 40,
+      "unitPrice": 98000,
+      "discount": 0,
+      "collected": 3920000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/05/28",
+      "customer": "خواربار محمدی",
+      "city": "پلدختر",
+      "product": "عدس",
+      "packKg": 0.4,
+      "qty": 50,
+      "unitPrice": 42000,
+      "discount": 0,
+      "collected": 2100000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/04",
+      "customer": "سوپرمارکت رضایی",
+      "city": "پلدختر",
+      "product": "لوبیا چیتی",
+      "packKg": 0.4,
+      "qty": 80,
+      "unitPrice": 46000,
+      "discount": 80000,
+      "collected": 3600000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/04",
+      "customer": "سوپرمارکت رضایی",
+      "city": "پلدختر",
+      "product": "نخود",
+      "packKg": 0.9,
+      "qty": 30,
+      "unitPrice": 82000,
+      "discount": 0,
+      "collected": 2460000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/05",
+      "customer": "فروشگاه رفاه خرم‌آباد",
+      "city": "خرم‌آباد",
+      "product": "لوبیا چیتی",
+      "packKg": 10,
+      "qty": 8,
+      "unitPrice": 980000,
+      "discount": 0,
+      "collected": 7840000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/06",
+      "customer": "خواربار محمدی",
+      "city": "پلدختر",
+      "product": "عدس",
+      "packKg": 0.4,
+      "qty": 60,
+      "unitPrice": 43000,
+      "discount": 0,
+      "collected": 2580000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/07",
+      "customer": "عمده‌فروشی حسینی",
+      "city": "کوهدشت",
+      "product": "نخود",
+      "packKg": 10,
+      "qty": 6,
+      "unitPrice": 720000,
+      "discount": 200000,
+      "collected": 2500000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/08",
+      "customer": "مغازه میدان",
+      "city": "پلدختر",
+      "product": "لوبیا قرمز",
+      "packKg": 0.4,
+      "qty": 40,
+      "unitPrice": 44000,
+      "discount": 0,
+      "collected": 1760000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/09",
+      "customer": "رستوران زاگرس",
+      "city": "خرم‌آباد",
+      "product": "عدس",
+      "packKg": 0.9,
+      "qty": 25,
+      "unitPrice": 88000,
+      "discount": 0,
+      "collected": 0,
+      "seller": "مدیر کارگاه"
+    },
+    {
+      "date": "1405/06/10",
+      "customer": "سوپر ستاره معمولان",
+      "city": "معمولان",
+      "product": "لوبیا چیتی",
+      "packKg": 0.9,
+      "qty": 35,
+      "unitPrice": 100000,
+      "discount": 50000,
+      "collected": 2000000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/11",
+      "customer": "تعاونی مصرف فرهنگیان",
+      "city": "پلدختر",
+      "product": "لپه",
+      "packKg": 0.9,
+      "qty": 20,
+      "unitPrice": 92000,
+      "discount": 0,
+      "collected": 1840000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/12",
+      "customer": "خواربار احمدی رومشکان",
+      "city": "رومشکان",
+      "product": "لوبیا قرمز",
+      "packKg": 0.9,
+      "qty": 28,
+      "unitPrice": 96000,
+      "discount": 0,
+      "collected": 1500000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/13",
+      "customer": "عمده‌فروشی حسینی",
+      "city": "کوهدشت",
+      "product": "لوبیا چیتی",
+      "packKg": 10,
+      "qty": 5,
+      "unitPrice": 990000,
+      "discount": 0,
+      "collected": 0,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/14",
+      "customer": "سوپرمارکت رضایی",
+      "city": "پلدختر",
+      "product": "لوبیا سفید",
+      "packKg": 0.4,
+      "qty": 45,
+      "unitPrice": 47000,
+      "discount": 0,
+      "collected": 2115000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/15",
+      "customer": "فروشگاه رفاه خرم‌آباد",
+      "city": "خرم‌آباد",
+      "product": "نخود",
+      "packKg": 0.9,
+      "qty": 40,
+      "unitPrice": 84000,
+      "discount": 100000,
+      "collected": 2000000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/16",
+      "customer": "پخش مواد غذایی کرمی",
+      "city": "اندیمشک",
+      "product": "لوبیا چیتی",
+      "packKg": 0.9,
+      "qty": 50,
+      "unitPrice": 99000,
+      "discount": 0,
+      "collected": 3000000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/17",
+      "customer": "مغازه میدان",
+      "city": "پلدختر",
+      "product": "عدس",
+      "packKg": 0.4,
+      "qty": 35,
+      "unitPrice": 43000,
+      "discount": 0,
+      "collected": 1505000,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/18",
+      "customer": "سوپر ستاره معمولان",
+      "city": "معمولان",
+      "product": "لپه",
+      "packKg": 0.9,
+      "qty": 18,
+      "unitPrice": 93000,
+      "discount": 0,
+      "collected": 0,
+      "seller": "ویزیتور پخش"
+    },
+    {
+      "date": "1405/06/18",
+      "customer": "خواربار محمدی",
+      "city": "پلدختر",
+      "product": "ماش",
+      "packKg": 0.4,
+      "qty": 20,
+      "unitPrice": 40000,
+      "discount": 0,
+      "collected": 800000,
+      "seller": "ویزیتور پخش"
+    }
+  ],
+  "customers": [
+    {
+      "name": "سوپرمارکت رضایی",
+      "phone": "0916-111-2201",
+      "city": "پلدختر",
+      "address": "خیابان امام، پلاک ۱۲",
+      "type": "سوپرمارکت",
+      "lastVisit": "1405/06/04",
+      "status": "فعال",
+      "note": "مشتری ثابت هفتگی"
+    },
+    {
+      "name": "خواربار محمدی",
+      "phone": "0916-222-3302",
+      "city": "پلدختر",
+      "address": "بازار روز، دهنه ۳",
+      "type": "خرده‌فروش",
+      "lastVisit": "1405/06/17",
+      "status": "فعال",
+      "note": ""
+    },
+    {
+      "name": "فروشگاه رفاه خرم‌آباد",
+      "phone": "0916-333-4403",
+      "city": "خرم‌آباد",
+      "address": "بلوار شریعتی",
+      "type": "سوپرمارکت",
+      "lastVisit": "1405/06/15",
+      "status": "فعال",
+      "note": "سفارش عمده"
+    },
+    {
+      "name": "عمده‌فروشی حسینی",
+      "phone": "0916-444-5504",
+      "city": "کوهدشت",
+      "address": "جاده پلدختر",
+      "type": "عمده‌فروش",
+      "lastVisit": "1405/06/13",
+      "status": "فعال",
+      "note": "پرداخت نسیه — پیگیری وصول"
+    },
+    {
+      "name": "مغازه میدان",
+      "phone": "0916-555-6605",
+      "city": "پلدختر",
+      "address": "میدان مرکزی",
+      "type": "خرده‌فروش",
+      "lastVisit": "1405/06/17",
+      "status": "فعال",
+      "note": ""
+    },
+    {
+      "name": "رستوران زاگرس",
+      "phone": "0916-666-7706",
+      "city": "خرم‌آباد",
+      "address": "بلوار ولایت",
+      "type": "رستوران",
+      "lastVisit": "1405/06/09",
+      "status": "فعال",
+      "note": "مشتری جدید — هنوز وصول نشده"
+    },
+    {
+      "name": "سوپر ستاره معمولان",
+      "phone": "0916-777-8807",
+      "city": "معمولان",
+      "address": "خیابان اصلی",
+      "type": "سوپرمارکت",
+      "lastVisit": "1405/06/18",
+      "status": "فعال",
+      "note": "مشتری جدید"
+    },
+    {
+      "name": "تعاونی مصرف فرهنگیان",
+      "phone": "0916-888-9908",
+      "city": "پلدختر",
+      "address": "نزدیک آموزش و پرورش",
+      "type": "خرده‌فروش",
+      "lastVisit": "1405/06/11",
+      "status": "فعال",
+      "note": ""
+    },
+    {
+      "name": "خواربار احمدی رومشکان",
+      "phone": "0916-999-1010",
+      "city": "رومشکان",
+      "address": "بازار رومشکان",
+      "type": "خرده‌فروش",
+      "lastVisit": "1405/06/12",
+      "status": "فعال",
+      "note": "مشتری جدید"
+    },
+    {
+      "name": "پخش مواد غذایی کرمی",
+      "phone": "0916-101-1212",
+      "city": "اندیمشک",
+      "address": "جاده اندیمشک",
+      "type": "عمده‌فروش",
+      "lastVisit": "1405/06/16",
+      "status": "فعال",
+      "note": "مسیر جدید ویزیت"
+    },
+    {
+      "name": "سوپر امید کوهدشت",
+      "phone": "0916-131-1414",
+      "city": "کوهدشت",
+      "address": "فلکه مرکزی",
+      "type": "سوپرمارکت",
+      "lastVisit": "1405/05/10",
+      "status": "بالقوه",
+      "note": "ویزیت شده، هنوز خرید نکرده"
+    },
+    {
+      "name": "خواربار روستایی چم مهر",
+      "phone": "0916-151-1616",
+      "city": "پلدختر",
+      "address": "چم مهر",
+      "type": "خرده‌فروش",
+      "lastVisit": "",
+      "status": "بالقوه",
+      "note": "در برنامه ویزیت هفته بعد"
+    }
+  ],
+  "visits": [
+    {
+      "date": "1405/06/04",
+      "region": "پلدختر شهر",
+      "planned": 8,
+      "visited": 7,
+      "orders": 3,
+      "orderAmount": 7140000,
+      "newCustomers": 0,
+      "collected": 6060000,
+      "km": 42,
+      "fuel": 420000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/05",
+      "region": "خرم‌آباد",
+      "planned": 6,
+      "visited": 5,
+      "orders": 1,
+      "orderAmount": 7840000,
+      "newCustomers": 0,
+      "collected": 7840000,
+      "km": 118,
+      "fuel": 1100000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/07",
+      "region": "کوهدشت",
+      "planned": 7,
+      "visited": 6,
+      "orders": 1,
+      "orderAmount": 4120000,
+      "newCustomers": 0,
+      "collected": 2500000,
+      "km": 95,
+      "fuel": 900000,
+      "note": "یکی از مشتری‌ها نبود"
+    },
+    {
+      "date": "1405/06/08",
+      "region": "پلدختر شهر",
+      "planned": 6,
+      "visited": 6,
+      "orders": 2,
+      "orderAmount": 1760000,
+      "newCustomers": 0,
+      "collected": 1760000,
+      "km": 38,
+      "fuel": 380000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/09",
+      "region": "خرم‌آباد",
+      "planned": 5,
+      "visited": 4,
+      "orders": 1,
+      "orderAmount": 2200000,
+      "newCustomers": 1,
+      "collected": 0,
+      "km": 120,
+      "fuel": 1150000,
+      "note": "رستوران زاگرس مشتری جدید"
+    },
+    {
+      "date": "1405/06/10",
+      "region": "معمولان",
+      "planned": 5,
+      "visited": 4,
+      "orders": 1,
+      "orderAmount": 3450000,
+      "newCustomers": 1,
+      "collected": 2000000,
+      "km": 55,
+      "fuel": 520000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/11",
+      "region": "پلدختر شهر",
+      "planned": 6,
+      "visited": 5,
+      "orders": 1,
+      "orderAmount": 1840000,
+      "newCustomers": 0,
+      "collected": 1840000,
+      "km": 40,
+      "fuel": 400000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/12",
+      "region": "رومشکان",
+      "planned": 5,
+      "visited": 3,
+      "orders": 1,
+      "orderAmount": 2688000,
+      "newCustomers": 1,
+      "collected": 1500000,
+      "km": 70,
+      "fuel": 680000,
+      "note": "جاده خراب — ۳ ویزیت جا ماند"
+    },
+    {
+      "date": "1405/06/13",
+      "region": "کوهدشت",
+      "planned": 6,
+      "visited": 5,
+      "orders": 1,
+      "orderAmount": 4950000,
+      "newCustomers": 0,
+      "collected": 0,
+      "km": 98,
+      "fuel": 940000,
+      "note": "عمده‌فروشی نسیه گرفت"
+    },
+    {
+      "date": "1405/06/14",
+      "region": "پلدختر شهر",
+      "planned": 5,
+      "visited": 5,
+      "orders": 1,
+      "orderAmount": 2115000,
+      "newCustomers": 0,
+      "collected": 2115000,
+      "km": 35,
+      "fuel": 350000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/15",
+      "region": "خرم‌آباد",
+      "planned": 6,
+      "visited": 5,
+      "orders": 1,
+      "orderAmount": 3260000,
+      "newCustomers": 0,
+      "collected": 2000000,
+      "km": 122,
+      "fuel": 1180000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/16",
+      "region": "اندیمشک",
+      "planned": 4,
+      "visited": 3,
+      "orders": 1,
+      "orderAmount": 4950000,
+      "newCustomers": 1,
+      "collected": 3000000,
+      "km": 145,
+      "fuel": 1400000,
+      "note": "مسیر جدید"
+    },
+    {
+      "date": "1405/06/17",
+      "region": "پلدختر شهر",
+      "planned": 7,
+      "visited": 6,
+      "orders": 2,
+      "orderAmount": 2305000,
+      "newCustomers": 0,
+      "collected": 2305000,
+      "km": 44,
+      "fuel": 440000,
+      "note": ""
+    },
+    {
+      "date": "1405/06/18",
+      "region": "معمولان",
+      "planned": 5,
+      "visited": 4,
+      "orders": 1,
+      "orderAmount": 1674000,
+      "newCustomers": 0,
+      "collected": 800000,
+      "km": 58,
+      "fuel": 550000,
+      "note": ""
+    }
+  ],
+  "expenses": [
+    {
+      "date": "1405/06/01",
+      "type": "اجاره",
+      "amount": 4000000,
+      "payer": "مدیر کارگاه",
+      "method": "نقد",
+      "note": "اجاره سوله شهریور"
+    },
+    {
+      "date": "1405/06/01",
+      "type": "حقوق",
+      "amount": 18000000,
+      "payer": "مدیر کارگاه",
+      "method": "نقد",
+      "note": "حقوق مدیر"
+    },
+    {
+      "date": "1405/06/01",
+      "type": "حقوق",
+      "amount": 8000000,
+      "payer": "مدیر کارگاه",
+      "method": "نقد",
+      "note": "حقوق مسئول انبار"
+    },
+    {
+      "date": "1405/06/01",
+      "type": "حقوق",
+      "amount": 9000000,
+      "payer": "مدیر کارگاه",
+      "method": "نقد",
+      "note": "حقوق بسته‌بندی"
+    },
+    {
+      "date": "1405/06/01",
+      "type": "حقوق",
+      "amount": 10000000,
+      "payer": "مدیر کارگاه",
+      "method": "نقد",
+      "note": "حقوق ویزیتور — بدون پورسانت"
+    },
+    {
+      "date": "1405/06/05",
+      "type": "برق",
+      "amount": 1800000,
+      "payer": "پدر مدیر",
+      "method": "کارت",
+      "note": "قبض برق"
+    },
+    {
+      "date": "1405/06/08",
+      "type": "بسته‌بندی",
+      "amount": 3200000,
+      "payer": "مدیر کارگاه",
+      "method": "نقد",
+      "note": "نایلون و کارتن"
+    },
+    {
+      "date": "1405/06/12",
+      "type": "تعمیرات",
+      "amount": 750000,
+      "payer": "پدر مدیر",
+      "method": "نقد",
+      "note": "تنظیم ترازو"
+    },
+    {
+      "date": "1405/06/15",
+      "type": "گاز",
+      "amount": 600000,
+      "payer": "پدر مدیر",
+      "method": "کارت",
+      "note": ""
+    },
+    {
+      "date": "1405/06/16",
+      "type": "سوخت",
+      "amount": 1400000,
+      "payer": "ویزیتور پخش",
+      "method": "نقد",
+      "note": "باک ماشین پخش"
+    },
+    {
+      "date": "1405/06/18",
+      "type": "آب",
+      "amount": 250000,
+      "payer": "پدر مدیر",
+      "method": "کارت",
+      "note": ""
+    }
+  ],
+  "suppliers": [
+    {
+      "name": "کشاورز بروجرد",
+      "phone": "0916-200-1111",
+      "city": "بروجرد",
+      "product": "لوبیا چیتی",
+      "price": 92000,
+      "quality": "عالی",
+      "payTerms": "نقد",
+      "days": 2,
+      "scorePrice": 8,
+      "scoreQuality": 9,
+      "scoreDelivery": 9,
+      "scoreStability": 8,
+      "scorePay": 7,
+      "status": "تأیید شده",
+      "note": "تأمین‌کننده اصلی لوبیا"
+    },
+    {
+      "name": "اتحادیه نخود کوهدشت",
+      "phone": "0916-200-2222",
+      "city": "کوهدشت",
+      "product": "نخود",
+      "price": 68000,
+      "quality": "خوب",
+      "payTerms": "چک ۱۰ روزه",
+      "days": 3,
+      "scorePrice": 9,
+      "scoreQuality": 8,
+      "scoreDelivery": 8,
+      "scoreStability": 8,
+      "scorePay": 8,
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "name": "بازرگانی حبوبات خرم‌آباد",
+      "phone": "0916-200-3333",
+      "city": "خرم‌آباد",
+      "product": "عدس",
+      "price": 76000,
+      "quality": "خوب",
+      "payTerms": "نقد",
+      "days": 1,
+      "scorePrice": 7,
+      "scoreQuality": 8,
+      "scoreDelivery": 9,
+      "scoreStability": 7,
+      "scorePay": 7,
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "name": "تأمین عدس دزفول",
+      "phone": "0916-200-4444",
+      "city": "دزفول",
+      "product": "عدس",
+      "price": 79000,
+      "quality": "متوسط",
+      "payTerms": "نقد",
+      "days": 4,
+      "scorePrice": 6,
+      "scoreQuality": 5,
+      "scoreDelivery": 6,
+      "scoreStability": 5,
+      "scorePay": 6,
+      "status": "در انتظار",
+      "note": "یک بار رد شده"
+    },
+    {
+      "name": "کشت و صنعت لرستان",
+      "phone": "0916-200-5555",
+      "city": "خرم‌آباد",
+      "product": "لوبیا سفید",
+      "price": 90000,
+      "quality": "عالی",
+      "payTerms": "چک ۲۰ روزه",
+      "days": 5,
+      "scorePrice": 7,
+      "scoreQuality": 9,
+      "scoreDelivery": 7,
+      "scoreStability": 8,
+      "scorePay": 9,
+      "status": "تأیید شده",
+      "note": ""
+    },
+    {
+      "name": "موجودی اول دوره",
+      "phone": "—",
+      "city": "پلدختر",
+      "product": "همه",
+      "price": 0,
+      "quality": "خوب",
+      "payTerms": "—",
+      "days": 0,
+      "scorePrice": 8,
+      "scoreQuality": 8,
+      "scoreDelivery": 8,
+      "scoreStability": 8,
+      "scorePay": 8,
+      "status": "تأیید شده",
+      "note": "ردیف سیستمی — حذف نشود"
+    }
+  ],
+  "employees": [
+    {
+      "name": "مدیر کارگاه",
+      "role": "مدیر/مالک",
+      "duties": "خرید، فروش، مالی، تصمیم‌گیری و کنترل سیستم",
+      "salary": 18000000,
+      "commissionRate": 0,
+      "start": "1403/01/01",
+      "status": "فعال",
+      "note": "مالک کارگاه"
+    },
+    {
+      "name": "پدر مدیر",
+      "role": "مسئول انبار",
+      "duties": "کارهای سبک، کنترل انبار و کمک به تولید",
+      "salary": 8000000,
+      "commissionRate": 0,
+      "start": "1403/01/01",
+      "status": "فعال",
+      "note": ""
+    },
+    {
+      "name": "مسئول بسته‌بندی",
+      "role": "نیروی تولید",
+      "duties": "پاک‌کنی و بسته‌بندی",
+      "salary": 9000000,
+      "commissionRate": 0,
+      "start": "1404/02/15",
+      "status": "فعال",
+      "note": "نیروی خانم"
+    },
+    {
+      "name": "ویزیتور پخش",
+      "role": "ویزیتور",
+      "duties": "ویزیت، فروش و پخش با ماشین شرکت",
+      "salary": 10000000,
+      "commissionRate": 0.02,
+      "start": "1404/03/01",
+      "status": "فعال",
+      "note": "نیروی آقا — پورسانت ۲٪ روی فروش وصول‌شده"
+    }
+  ],
+  "inventoryMoves": [
+    {
+      "date": "1405/06/09",
+      "kind": "مواد اولیه",
+      "product": "عدس",
+      "inn": 0,
+      "out": 2.5,
+      "unit": "کیلوگرم",
+      "loc": "سالن تولید",
+      "reason": "نمونه کنترل کیفیت"
+    },
+    {
+      "date": "1405/06/13",
+      "kind": "محصول نهایی",
+      "product": "لوبیا چیتی",
+      "inn": 0,
+      "out": 1,
+      "unit": "کیلوگرم",
+      "loc": "انبار محصول نهایی",
+      "reason": "پارگی بسته — ضایعات"
+    }
+  ],
+  "kpis": [
+    {
+      "key": "sales_day",
+      "name": "فروش روزانه",
+      "green": 3000000,
+      "yellow": 1500000,
+      "direction": "higher",
+      "unit": "تومان",
+      "actionRed": "امروز فروش ضعیف است. با ویزیتور تماس بگیرید و مسیر را چک کنید.",
+      "actionYellow": "فروش امروز کمتر از هدف است؛ اگر قبل از ظهر است نگران نباشید."
+    },
+    {
+      "key": "sales_month",
+      "name": "فروش ماهانه",
+      "green": 80000000,
+      "yellow": 50000000,
+      "direction": "higher",
+      "unit": "تومان",
+      "actionRed": "فروش ماه از کف فاصله گرفته. برنامه ویزیت و تخفیف هدفمند بگذارید.",
+      "actionYellow": "فروش ماه زیر هدف است. تا پایان ماه روی مشتری‌های A تمرکز کنید."
+    },
+    {
+      "key": "gross_profit",
+      "name": "سود ناخالص",
+      "green": 15000000,
+      "yellow": 3000000,
+      "direction": "higher",
+      "unit": "تومان",
+      "actionRed": "سود ناکافی است. قیمت خرید یا فروش یا هزینه‌ها را بازبینی کنید.",
+      "actionYellow": "سود نازک شده؛ میانگین قیمت خرید را با ماه قبل مقایسه کنید."
+    },
+    {
+      "key": "purchases",
+      "name": "خرید مواد اولیه",
+      "green": null,
+      "yellow": null,
+      "direction": "info",
+      "unit": "تومان",
+      "actionRed": "",
+      "actionYellow": ""
+    },
+    {
+      "key": "raw_stock",
+      "name": "موجودی مواد اولیه",
+      "green": 200,
+      "yellow": 80,
+      "direction": "higher",
+      "unit": "کیلوگرم",
+      "actionRed": "مواد اولیه رو به اتمام است. امروز خرید هماهنگ کنید.",
+      "actionYellow": "موجودی مواد کم است؛ تأمین‌کننده را خبر کنید."
+    },
+    {
+      "key": "fin_stock",
+      "name": "موجودی محصول نهایی",
+      "green": 80,
+      "yellow": 30,
+      "direction": "higher",
+      "unit": "کیلوگرم",
+      "actionRed": "محصول آماده کم است. خط تولید را اولویت بدهید.",
+      "actionYellow": "موجودی محصول در حال کاهش است."
+    },
+    {
+      "key": "production",
+      "name": "مقدار تولید",
+      "green": 700,
+      "yellow": 350,
+      "direction": "higher",
+      "unit": "کیلوگرم",
+      "actionRed": "تولید این ماه کم است. برنامه پاک‌کنی و بسته‌بندی را ببینید.",
+      "actionYellow": "تولید زیر هدف ماه است."
+    },
+    {
+      "key": "waste",
+      "name": "درصد ضایعات",
+      "green": 0.03,
+      "yellow": 0.06,
+      "direction": "lower",
+      "unit": "درصد",
+      "actionRed": "ضایعات بحرانی است. کیفیت خرید و کار پاک‌کنی را همان امروز بررسی کنید.",
+      "actionYellow": "ضایعات بالاتر از حد مطلوب است؛ بار مشکوک را جدا کنید."
+    },
+    {
+      "key": "orders",
+      "name": "تعداد سفارش‌ها",
+      "green": 15,
+      "yellow": 8,
+      "direction": "higher",
+      "unit": "عدد",
+      "actionRed": "سفارش کم است. ویزیتور باید مسیرهای خوابیده را بیدار کند.",
+      "actionYellow": "تعداد سفارش زیر هدف است."
+    },
+    {
+      "key": "new_cust",
+      "name": "مشتریان جدید",
+      "green": 3,
+      "yellow": 1,
+      "direction": "higher",
+      "unit": "نفر",
+      "actionRed": "مشتری جدید جذب نشده. یک نیم‌روز را به مشتری‌یابی اختصاص دهید.",
+      "actionYellow": "جذب مشتری جدید کند است."
+    },
+    {
+      "key": "collected",
+      "name": "مبلغ وصول‌شده",
+      "green": 50000000,
+      "yellow": 30000000,
+      "direction": "higher",
+      "unit": "تومان",
+      "actionRed": "وصول ضعیف است. مطالبات مشتری‌های A را امروز پیگیری کنید.",
+      "actionYellow": "وصول کمتر از هدف است."
+    },
+    {
+      "key": "receivables",
+      "name": "مطالبات",
+      "green": 12000000,
+      "yellow": 25000000,
+      "direction": "lower",
+      "unit": "تومان",
+      "actionRed": "مطالبات بالاست. تا وصول نشود سفارش نسیه جدید ندهید.",
+      "actionYellow": "مطالبات در حال رشد است؛ موعدها را چک کنید."
+    },
+    {
+      "key": "expenses",
+      "name": "هزینه‌ها",
+      "green": 25000000,
+      "yellow": 45000000,
+      "direction": "lower",
+      "unit": "تومان",
+      "actionRed": "هزینه از سقف گذشته. خرید غیرضروری را متوقف کنید.",
+      "actionYellow": "هزینه‌ها در حال عبور از هدف است."
+    },
+    {
+      "key": "visit_rate",
+      "name": "درصد انجام ویزیت",
+      "green": 0.8,
+      "yellow": 0.6,
+      "direction": "higher",
+      "unit": "درصد",
+      "actionRed": "ویزیت‌ها طبق برنامه نیست. علت جا ماندن مسیر را بپرسید.",
+      "actionYellow": "بخشی از ویزیت‌ها انجام نشده."
+    },
+    {
+      "key": "conversion",
+      "name": "نرخ تبدیل ویزیت به سفارش",
+      "green": 0.4,
+      "yellow": 0.25,
+      "direction": "higher",
+      "unit": "درصد",
+      "actionRed": "ویزیت به فروش تبدیل نمی‌شود. قیمت، موجودی یا کیفیت را بررسی کنید.",
+      "actionYellow": "نرخ تبدیل پایین است."
+    },
+    {
+      "key": "accept_rate",
+      "name": "درصد بارهای قبول‌شده",
+      "green": 0.9,
+      "yellow": 0.75,
+      "direction": "higher",
+      "unit": "درصد",
+      "actionRed": "بارهای زیادی رد می‌شود. تأمین‌کننده را عوض یا تذکر دهید.",
+      "actionYellow": "کیفیت خرید نوسان دارد."
+    }
+  ],
+  "lists": {
+    "quality": [
+      "عالی",
+      "خوب",
+      "متوسط",
+      "ضعیف"
+    ],
+    "approval": [
+      "تأیید شده",
+      "در انتظار",
+      "رد شده"
+    ],
+    "custTypes": [
+      "عمده‌فروش",
+      "خرده‌فروش",
+      "سوپرمارکت",
+      "رستوران",
+      "مصرف‌کننده"
+    ],
+    "expenseTypes": [
+      "حقوق",
+      "اجاره",
+      "برق",
+      "گاز",
+      "سوخت",
+      "بسته‌بندی",
+      "تعمیرات",
+      "حمل",
+      "آب",
+      "متفرقه"
+    ],
+    "payMethods": [
+      "نقد",
+      "کارت",
+      "چک",
+      "نسیه"
+    ],
+    "cities": [
+      "پلدختر",
+      "خرم‌آباد",
+      "کوهدشت",
+      "رومشکان",
+      "معمولان",
+      "اندیمشک",
+      "دزفول",
+      "بروجرد"
+    ],
+    "regions": [
+      "پلدختر شهر",
+      "پلدختر روستا",
+      "خرم‌آباد",
+      "کوهدشت",
+      "رومشکان",
+      "معمولان"
+    ]
+  }
+}

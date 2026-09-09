@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url("/fonts/Vazirmatn-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url("/fonts/Vazirmatn-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url("/fonts/Vazirmatn-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url("/fonts/Vazirmatn-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Vazirmatn", "Tahoma", system-ui, sans-serif;
+  --font-display: "Vazirmatn", "Tahoma", system-ui, sans-serif;
+
+  --color-bg: #f4efe6;
+  --color-surface: #fffcf6;
+  --color-muted: #ebe4d6;
+  --color-fg: #241f18;
+  --color-fg-muted: #6b6256;
+  --color-fg-subtle: #8a8174;
+  --color-primary: #2f4a32;
+  --color-primary-foreground: #f4efe6;
+  --color-secondary: #fffcf6;
+  --color-secondary-foreground: #241f18;
+  --color-border: #c9bfae;
+  --color-ring: #3f5e41;
+  --color-ok: #0f5132;
+  --color-ok-bg: #d1e7dd;
+  --color-warn: #664d03;
+  --color-warn-bg: #fff3cd;
+  --color-bad: #842029;
+  --color-bad-bg: #f8d7da;
+  --color-ink: #241f18;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+}
+
+@layer base {
+  html {
+    direction: rtl;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+  * {
+    border-color: var(--color-border);
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .print-page {
+    box-shadow: none !important;
+    border: 1px solid #222 !important;
+  }
+}
