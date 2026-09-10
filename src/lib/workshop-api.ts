@@ -38,11 +38,14 @@ async function loadDoc() {
 async function saveDoc(doc: WorkshopDoc, userId: string, version: number) {
   const sql = await sqlClient();
   const next = version + 1;
-  await sql.query(
-    "update workshop_state set payload = $1::jsonb, version = $2, updated_at = now(), updated_by = $3 where id = $4",
-    [JSON.stringify(doc), next, userId, STATE_ID],
+  const rows = await sql.query(
+    "update workshop_state set payload = $1::jsonb, version = $2, updated_at = now(), updated_by = $3 where id = $4 and version = $5 returning version",
+    [JSON.stringify(doc), next, userId, STATE_ID, version],
   );
-  return next;
+  if (!rows[0]) {
+    throw new WorkshopError("اطلاعات همزمان توسط کاربر دیگری تغییر کرده است. صفحه را تازه کنید و دوباره تلاش کنید.", 409);
+  }
+  return Number((rows[0] as { version: number }).version) || next;
 }
 
 async function getProfile(userId: string): Promise<SessionProfile | null> {
